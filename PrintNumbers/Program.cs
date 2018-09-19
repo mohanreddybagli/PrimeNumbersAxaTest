@@ -10,7 +10,6 @@ namespace PrintNumberTypes
     {
         static int startingNumber;
         static int endingNumber;
-
         static List<string> numbers = null;
         static void Main(string[] args)
         {
