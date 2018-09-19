@@ -27,5 +27,26 @@ namespace NumbersTest
             var result = obj.Print(sNumber, eNumber);
             Assert.AreEqual(eNumber, int.Parse(result[result.Count - 1]));
         }
+
+        [TestMethod]
+        public void Return_PrimeNumber()
+        {
+            int sNumber = 8;
+            int eNumber = 12;
+
+            PrintNumbers obj = new PrintNumbers();
+            var result = obj.PrintPrimeNumbers(sNumber, eNumber);
+            Assert.AreEqual("Prime", result[3]);
+        }
+        [TestMethod]
+        public void Return_non_PrimeNumber()
+        {
+            int sNumber = 14;
+            int eNumber = 16;
+
+            PrintNumbers obj = new PrintNumbers();
+            var result = obj.PrintPrimeNumbers(sNumber, eNumber);
+            Assert.IsTrue(!result.Contains("Prime"));
+        }
     }
 }

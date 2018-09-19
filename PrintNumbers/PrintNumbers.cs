@@ -21,5 +21,44 @@ namespace PrintNumberTypes
             return numbers;
         }
 
+
+        //Print the prime numbers
+
+        public List<string> PrintPrimeNumbers(int sNumber, int eNumber)
+        {
+            for (int j = sNumber; j <= eNumber; j++)
+            {
+                if (j == 0)
+                {
+                    numbers.Add("0");
+                }
+                else if (j == 1)
+                {
+                    numbers.Add("1");
+                }
+                else
+                {
+                    for (int i = 2; i <= j - 1; i++)
+                    {
+
+
+                        if (j % i == 0)
+                        {
+                            numbers.Add(j.ToString());
+                            break;
+                        }
+                        else if (i == (j - 1))
+                        {
+                            numbers.Add("Prime");
+                            break;
+                        }
+                    }
+
+                }
+            }
+
+            return numbers;
+        }
+
     }
 }
