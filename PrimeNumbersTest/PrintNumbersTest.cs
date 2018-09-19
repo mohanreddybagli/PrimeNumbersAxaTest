@@ -48,5 +48,25 @@ namespace NumbersTest
             var result = obj.PrintPrimeNumbers(sNumber, eNumber);
             Assert.IsTrue(!result.Contains("Prime"));
         }
+        [TestMethod]
+        public void Return_Odd_CompositNumber()
+        {
+            int sNumber = 0;
+            int eNumber = 10;
+
+            PrintNumbers obj = new PrintNumbers();
+            var result = obj.PrintCompositNumbers(sNumber, eNumber);
+            Assert.AreEqual("Composit", result[8]);
+        }
+        [TestMethod]
+        public void Return_non_odd_CompositNumber()
+        {
+            int sNumber = 0;
+            int eNumber = 8;
+
+            PrintNumbers obj = new PrintNumbers();
+            var result = obj.PrintCompositNumbers(sNumber, eNumber);
+            Assert.IsTrue(!result.Contains("Composit"));
+        }
     }
 }

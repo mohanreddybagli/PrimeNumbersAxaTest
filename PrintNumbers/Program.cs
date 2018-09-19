@@ -26,7 +26,15 @@ namespace PrintNumberTypes
             if (numbertype == "1")
             {
                 numbers = objPrintNumbers.Print(startingNumber, endingNumber);
-            }            
+            }
+            else if (numbertype == "2")
+            {
+                numbers = objPrintNumbers.PrintPrimeNumbers(startingNumber, endingNumber);
+            }
+            else if (numbertype == "3")
+            {
+                numbers = objPrintNumbers.PrintCompositNumbers(startingNumber, endingNumber);
+            }
             foreach (string number in numbers)
             {
                 Console.WriteLine(number);
